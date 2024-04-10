@@ -1,0 +1,32 @@
+# .env file used to deploy the Storefront code
+INSTANCEURL=changeme.dx.commercecloud.salesforce.com
+INSTANCENAME=changeme
+CLIENTID=changeme
+CLIENTSECRET=changeme
+
+# Used to import data
+DW_USERNAME=changeme
+DW_PASSWORD=changeme
+CODE_VERSION=changeme
+INSTANCE_WEBDAV_ACCESS_KEY=changeme
+
+# Source instance for sfcc data
+SOURCE_INSTANCEURL=changeme.dx.commercecloud.salesforce.com
+SOURCE_CLIENTID=
+SOURCE_CLIENTSECRET=
+
+# Path
+VSC_DIR=/workspaces/changeme/.vscode
+CORE_DIR=/workspaces/changeme/sfcc-optus-core
+STOREFRONT_DIR=/workspaces/changeme/sfcc-optus-storefront
+DATA_DIR=/workspaces/changeme/sfcc-optus-storefront/sfra_optus_au_data
+TMP_DIR=/workspaces/changeme/tmp
+CONFIG_FILE=/workspaces/changeme/.devcontainer/scripts/config
+SRC_DIR=/workspaces/changeme/.devcontainer/scripts/src
+
+# Additional
+SKIP_BUILD=
+SKIP_DEPLOY=
+SKIP_DATA_IMPORT=
+SKIP_ORG_MIGRATION=
+RENEW_CONTAINER=

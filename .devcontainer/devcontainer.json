@@ -1,0 +1,69 @@
+{
+  "name": "SFCC change Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // Prettify on save
+        "editor.formatOnSave": true,
+        // prettier uses 2 spaces instead of 4
+        "editor.tabSize": 2,
+        // organize imports on save && lint on save
+        "git.openDiffOnClick": false,
+        "css.lint.unknownAtRules": "ignore",
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": "always",
+          "source.fixAll.eslint": "always"
+        },
+        "eslint.workingDirectories": [
+          "./sfcc-optus-core/sfra_optus_core",
+          "./sfcc-optus-storefront/sfra_optus_au"
+        ],
+        "stylelint.autoFixOnSave": true,
+        "eslint.validate": [
+          "javascript"
+        ],
+        "[isml]": {
+          "editor.tabSize": 2,
+          "editor.formatOnSave": false,
+          "editor.formatOnPaste": false,
+          "editor.formatOnType": false
+        },
+        "[js]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": true,
+          "editor.formatOnPaste": true,
+          "editor.formatOnType": true
+        },
+        "[markdown]": {
+          "editor.formatOnPaste": false,
+          "editor.formatOnSave": false,
+          "editor.formatOnType": false
+        }
+      },
+      "extensions": [
+        // Prettier - Code formatter
+        "esbenp.prettier-vscode",
+        // Es lint
+        "dbaeumer.vscode-eslint",
+        // Prophet
+        "SqrTT.prophet",
+        // Headwind
+        "heybourn.headwind",
+        // Tailwind CSS Intellisense
+        "bradlc.vscode-tailwindcss",
+        // Alpine JS Intellisense
+        "adrianwilczynski.alpine-js-intellisense"
+      ]
+    }
+  },
+  "remoteUser": "changeme",
+  "runArgs": [
+      "--env-file=.devcontainer/scripts/config",
+      "--name=changeme" // container name
+  ],
+  "postCreateCommand": "bash .devcontainer/scripts/postCreateCommand.sh",
+  "postStartCommand": "bash .devcontainer/scripts/postStartCommand.sh"
+}

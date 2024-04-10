@@ -1,0 +1,9 @@
+{
+  "name": "changeme",
+  "version": "1.0.0",
+  "scripts": {
+    "setup-mac": "bash .devcontainer/scripts/src/init.sh",
+    "setup-win": "pwsh .devcontainer/scripts/src/setup.ps1"
+  },
+  "license": "ISC"
+}
